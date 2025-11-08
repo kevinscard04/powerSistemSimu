@@ -1,13 +1,19 @@
 {
-  "python-envs.defaultEnvManager": "ms-python.python:venv",
-  "black-formatter.args": ["--line-length", "100"]
-  "python-envs.pythonProjects": [],
+  // Configuração correta para o Black Formatter
+  "black-formatter.args": ["--line-length", "100"], 
+  
+  // Otimização: A extensão Pylance/Python é preferida para esta configuração
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    // Define o formatador padrão como Black
+    // "editor.defaultFormatter": "ms-python.black-formatter", 
+    "python.formatting.provider": "black", // ✅ Define o Black como formatador
+    // Formata o arquivo inteiro ao salvar
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+    // Opcional: Remove formatOnType para evitar formatação constante
+    // "editor.formatOnType": true, 
+    // Organiza imports automaticamente (requer Pylance ou Isort)
+    "editor.codeActionsOnSave": { 
+      "source.organizeImports": "explicit"
     }
   }
 }

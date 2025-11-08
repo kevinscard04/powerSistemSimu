@@ -12,6 +12,8 @@
     "vscode": {
       // 3.1. Configurações de Ambiente
       "settings": {
+
+        "workbench.colorTheme": "Default Dark Modern",
         // Define o interpretador Python padrão para o novo venv criado
         "python.defaultInterpreterPath": ".venv/bin/python",
         // Sugestões para facilitar o desenvolvimento (opcional)
